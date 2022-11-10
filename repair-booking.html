@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<!---HEAD------------------------------------------------>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>invoice | zwischenzug</title>
+	<!--Embed bootstrap CSS-->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<!---BODY------------------------------------------------>
+<body onload='loadRepairBooking()'>
+	<div class="d-flex justify-content-center">
+	<!--main-->
+		<div class="col-6 col-md-12 my-5 w-75 border border-dark col-12">
+			<div class="row bg-secondary w-100 p-4 g-0 d-flex justify-content-between">
+				<h2 class="col-12 col-md-6 align-middle fw-bold">Repair Booking</h2>
+				<div class="col-12 col-md-6 d-flex align-items-end flex-column">
+					<p>Amount Due:</p>
+					<h4>$<span id="bigTotal"></span></h4>
+				</div>
+			</div>
+			<div class="row d-flex justify-content-between border-bottom border-dark w-100 g-0">
+				<div class="col-12 col-md-12 col-lg-4 mt-3 mx-5" style="width:fit-content">
+					<h4 class="fw-bold" style="color:black">Customer Details</h4>
+					<p><span id="name"></span><br>
+					<span id="address"></span><br>
+					<span id="phone"></span><br>
+					<span id="email"></span><br>
+					<span id="customerTypeVar"></span></p>
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 my-3 mx-5" style="width:fit-content">
+					<h4 class="fw-bold" style="color:black">Repair Job</h4>
+					<p>
+					Job Number:		<span id="jobNum"></span><br>
+					Invoice Date: <span id="invoiceDate"></span><br>
+					Payment Due: 	<span id="paymentDue"></span></p>
+				</div>
+			</div>
+
+
+			<div class="col-12 col-md-12 col-lg-4 mt-3 mx-5" style=" width:fit-content">
+				<h4 class="fw-bold" style="color:black">Repair Details</h4>
+				<p>Purchase Date: <span id="purchaseDate"></span><br>
+				Repair Date: <span id="repairDate"></span><br>
+				Under Warranty: <span id="warranty"></span><br>
+				Phone Make: <span id="make"></span><br>
+				Phone Model: <span id="model"></span><br>
+				IMEI Number: <span id="imei"></span><br>
+				Fault Category: <span id="fault"></span><br>
+				Fault Description: <span id="desc"></span></p>
+			</div>
+			<div class="row d-flex justify-content-between g-0">
+				<div class="col-12 col-md-12 col-lg-4 mt-3 mx-5" style=" width:fit-content">
+					<h4 class="fw-bold" style="color:black">Courtesy Loan Device Details</h4>
+					<div class="row mt-2 ms-3 me-3 bg-white">
+						<table class="table table-bordered" id="borrowItems">
+							<tr>
+								<td>Item</td>
+								<td>Cost</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="col-12 col-md-12 col-lg-4 my-3 mx-5" style=" width:fit-content">
+					<h4 class="fw-bold" style="color:black">Totals</h4>
+					<p>Bond: $<span id="bond"></span><br>
+					Service Fee: $<span id="serviceFee"></span><br>
+					Total: $<span id="totalFee"></span><br>
+					GST: $<span id="GST"></span><br>
+					Total(+GST): $<span id="totalPlusGST"></span></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--insert Bootstrap JS-->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+	<!--insert JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<!--insert our own js file-->
+
+	<script src="js/genbooking.js"></script>
+</body>
+</html>
